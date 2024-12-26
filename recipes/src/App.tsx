@@ -15,14 +15,10 @@ const App = () => {
       </GridItem>
       <Show above="lg">
         {/** Will only show on lager devices */}
-        <GridItem area="aside" bg="gold">
-          Aside
-        </GridItem>
+        <GridItem>Aside</GridItem>
       </Show>
 
-      <GridItem area="main" bg="green">
-        Main
-      </GridItem>
+      <GridItem>Main</GridItem>
     </Grid>
   );
 };
