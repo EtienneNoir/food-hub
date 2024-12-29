@@ -1,5 +1,6 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
+import RecepeGrid from "./components/RecepeGrid";
 
 const App = () => {
   return (
@@ -7,18 +8,16 @@ const App = () => {
     <Grid
       templateAreas={{
         base: `"nav""main"`, // mobile devices
-        lg: `"nav nav" "aside main"`, // devices larger than 1024px
+        lg: `"nav""main"`, // devices larger than 1024px
       }}
     >
       <GridItem area="nav">
         <NavBar />
       </GridItem>
-      <Show above="lg">
-        {/** Will only show on lager devices */}
-        <GridItem>Aside</GridItem>
-      </Show>
 
-      <GridItem>Main</GridItem>
+      <GridItem area="main">
+        <RecepeGrid />
+      </GridItem>
     </Grid>
   );
 };
