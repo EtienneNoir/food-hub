@@ -15,6 +15,7 @@ export const RecepiCard = ({ recipe }: Props) => {
         transform: "scale(1.05)",
         boxShadow: "xl",
       }}
+      width="300px"
     >
       <Image src={recipe.image} />
       <CardBody>
