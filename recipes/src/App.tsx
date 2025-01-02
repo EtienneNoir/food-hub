@@ -1,10 +1,16 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Grid, GridItem, Heading } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import RecepeGrid from "./components/RecepeGrid";
+import SearchInput from "./components/SearchInput";
+import { useState } from "react";
+import { RecHeading } from "./components/RecHeading";
 
+export interface GameQuery {
+  searchText: string;
+}
 const App = () => {
+  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
   return (
-    // creating break points, to specify how the website should look on different devices
     <Grid
       templateAreas={{
         base: `"nav""main"`, // mobile devices
@@ -12,11 +18,13 @@ const App = () => {
       }}
     >
       <GridItem area="nav">
-        <NavBar />
+        <NavBar
+          onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
+        />
       </GridItem>
-
       <GridItem area="main">
-        <RecepeGrid />
+        <RecHeading />
+        <RecepeGrid gameQuery={gameQuery} />
       </GridItem>
     </Grid>
   );

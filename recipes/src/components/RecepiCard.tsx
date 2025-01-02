@@ -12,12 +12,10 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
-  Center,
   Text,
   HStack,
-  VStack,
 } from "@chakra-ui/react";
-import { Recipe } from "./RecepeGrid";
+import { Recipe } from "../services/useMeals";
 
 interface Props {
   recipe: Recipe;
