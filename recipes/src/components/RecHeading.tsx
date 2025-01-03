@@ -3,7 +3,12 @@ import logo from "../assets/chefLog.png";
 
 export const RecHeading = () => {
   return (
-    <Flex direction="column" justifyContent="center" alignItems="center">
+    <Flex
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+      padding={2}
+    >
       <HStack>
         <Heading
           as="h3"
