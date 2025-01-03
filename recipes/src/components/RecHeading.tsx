@@ -11,20 +11,11 @@ export const RecHeading = () => {
           textTransform="uppercase"
           fontFamily="heading"
           whiteSpace="nowrap"
-          cursor="pointer"
         >
           la nourriture
         </Heading>
-        <Tooltip
-          label="Leave the search input empty and press search to go back to the Home menu after searching for a meal!"
-          fontSize="smaller"
-          placement="top-end"
-          hasArrow
-          bg="gray.400"
-          borderRadius={10}
-        >
-          <Image src={logo} boxSize="90px" padding="10px" />
-        </Tooltip>
+
+        <Image src={logo} boxSize="90px" padding="10px" />
       </HStack>
     </Flex>
   );
