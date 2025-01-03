@@ -20,7 +20,7 @@ export const RecHeading = () => {
           la nourriture
         </Heading>
 
-        <Image src={logo} boxSize="90px" padding="10px" />
+        <Image src={logo} boxSize="90px" />
       </HStack>
     </Flex>
   );
